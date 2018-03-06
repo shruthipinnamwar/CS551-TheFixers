@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/_16sdp"
+        android:scrollbars="none"
+        android:background="@drawable/background"
+        tools:context="com.inducesmile.androidloginsystem.SignUpActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/_16sdp"
+        android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/business_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/_24sdp"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/logo" />
+
+    <TextView
+        android:id="@+id/login_error"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:padding="@dimen/_8sdp"
+        android:text="@string/no_text"
+        android:textColor="@color/colorAccent" />
+
+    <EditText
+        android:id="@+id/names"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:background="@drawable/bottom_border"
+        android:hint="@string/name_hint"
+        android:inputType="text"
+        android:maxLines="1"
+        android:padding="@dimen/_12sdp"
+        android:textColor="@color/colorWhite"
+        android:singleLine="true" />
+
+    <EditText
+        android:id="@+id/username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:background="@drawable/bottom_border"
+        android:textColor="@color/colorWhite"
+        android:hint="@string/username_hint"
+        android:inputType="text"
+        android:maxLines="1"
+        android:padding="@dimen/_12sdp"
+        android:singleLine="true" />
+
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorWhite"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:background="@drawable/bottom_border"
+        android:hint="@string/email_hint"
+        android:inputType="textEmailAddress"
+        android:maxLines="1"
+        android:padding="@dimen/_12sdp"
+        android:singleLine="true" />
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorWhite"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:background="@drawable/bottom_border"
+        android:hint="@string/password_hint"
+        android:inputType="textPassword"
+        android:maxLines="1"
+        android:padding="@dimen/_12sdp"
+        android:singleLine="true" />
+
+    <Button
+        android:id="@+id/create_account_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:paddingBottom="@dimen/_24sdp"
+        android:paddingTop="@dimen/_24sdp"
+        android:text="@string/create_account"
+        android:textAllCaps="true"
+        android:textColor="@color/colorWhite"
+        android:background="@color/colorRegister"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/forgotten_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:padding="@dimen/_8sdp"
+        android:textColor="@color/colorWhite"
+        android:text="@string/terms_of_service"/>
+
+    </LinearLayout>
+</ScrollView>
