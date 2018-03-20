@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">Android Login System</string>
+    <string name="tag_line">Your tag line</string>
+    <string name="login_button">LOG IN</string>
+    <string name="sign_up_button">SIGN UP</string>
+    <string name="name_hint">Name</string>
+    <string name="username_hint">Username</string>
+    <string name="email_hint">Email</string>
+    <string name="password_hint">Password</string>
+    <string name="forget_password">Forget Password?</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="username_login_error_message">Username field is empty, try again</string>
+    <string name="password_login_error_message">Password field is empty, try again</string>
+    <string name="name_login_error_message">Name field is empty, try again</string>
+    <string name="email_login_error_message">Email field is empty, try again</string>
+    <string name="email_login_invalid">Invalid email format, try again</string>
+    <string name="no_text"> </string>
+    <string name="short_input">Username or password should be more than 6 characters</string>
+    <string name="terms_of_service">By signing up you agree to the terms of service and privacy policy</string>
+    <string name="create_account">Create an account</string>
+    <string name="recovery">Enter email for your account recovery</string>
+    <string name="failed_login">Incorrect email or password</string>
+    <string name="welcome_back">Welcome back!!!</string>
+    <string name="invalid_email">Invalid email address!! Try again</string>
+    <string name="logout_action">Logout</string>
+    <string name="welcome">Welcome</string>
+
+    <!--Facebook String Resource-->
+    <string name="facebook_app_id">1578176785828759</string>
+</resources>
