@@ -10,37 +10,18 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context="com.filestack.android.demo.MainActivity">
-        <Button
-            android:id="@+id/filestack_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true" android:layout_centerHorizontal="true"
-            android:layout_marginTop="211dp"
-            android:onClick="openFilestack"
-            android:text="Upload Files" />
+        android:background="@color/accent"
+        tools:context="com.filestack.android.demo.OnCampActivity">
 
         <Button
-            android:id="@+id/file_browser_button"
+            android:id="@+id/button2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/filestack_button"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="29dp"
-            android:onClick="openFileBrowser"
-            android:text="Browse Files from your device" />
-
-
-        <TextView
-            android:id="@+id/maction_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_alignStart="@+id/filestack_button"
-            android:layout_marginTop="115dp"
-            android:text="action name " />
-
-
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="106dp"
+            android:onClick="getlocations"
+            android:text="Button" />
 
         <!--<TextView-->
             <!--android:id="@+id/textView"-->

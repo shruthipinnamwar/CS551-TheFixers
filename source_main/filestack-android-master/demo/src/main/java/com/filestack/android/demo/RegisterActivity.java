@@ -109,6 +109,7 @@ public class RegisterActivity extends AppCompatActivity {
                             user.setPhone("1");
                             user.setProfile_image("");
                             user.setSecurity_level("1");
+                            user.setScore("100");
                             user.setUser_id(FirebaseAuth.getInstance().getCurrentUser().getUid());
                             FirebaseDatabase.getInstance().getReference()
                                     .child(getString(R.string.dbnode_users))
@@ -119,7 +120,7 @@ public class RegisterActivity extends AppCompatActivity {
                                         public void onComplete(@NonNull Task<Void> task) {
                                             FirebaseAuth.getInstance().signOut();
 
-                                            //redirect the user to the login screen
+                                             //redirect the user to the login screen
                                             redirectLoginScreen();
                                         }
                                     }).addOnFailureListener(new OnFailureListener() {

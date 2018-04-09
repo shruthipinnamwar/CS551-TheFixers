@@ -10,6 +10,9 @@ import android.view.View;
 import com.filestack.FileLink;
 import com.filestack.android.FsConstants;
 import com.filestack.android.Selection;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.Locale;
 
@@ -28,6 +31,16 @@ public class UploadStatusReceiver extends BroadcastReceiver {
         String finalurl = "https://cdn.filestackcontent.com/" + handle;
         String msg = String.format(locale, "upload %s: %s (%s) ((%s))", status, name, handle ,finalurl);
         Log.i(TAG, msg);
+
+                /*
+                ------ Change URL -----
+                 */
+//        DatabaseReference reference = FirebaseDatabase.getInstance().getReference();
+
+//            reference.child(getString(R.string.dbnode_users))
+//                    .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
+//                    .child(getString(R.string.field_name))
+//                    .setValue(finalurl);
 
 
     }

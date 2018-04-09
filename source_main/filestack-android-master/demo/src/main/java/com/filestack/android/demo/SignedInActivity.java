@@ -8,9 +8,19 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.TextView;
+import android.widget.Toast;
 
+import com.filestack.android.demo.models.User;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
+import com.google.firebase.database.ValueEventListener;
 import com.nostra13.universalimageloader.core.ImageLoader;
 
 import com.filestack.android.demo.utility.UniversalImageLoader;
@@ -21,7 +31,7 @@ public class SignedInActivity extends AppCompatActivity {
 
     //Firebase
     private FirebaseAuth.AuthStateListener mAuthListener;
-
+    private TextView mScore;
     // widgets and UI References
 
 
@@ -31,10 +41,18 @@ public class SignedInActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signedin);
         Log.d(TAG, "onCreate: started.");
+        mScore = (TextView) findViewById(R.id.score);
 
         setupFirebaseAuth();
 
         initImageLoader();
+
+        getUserScoreData();
+    }
+
+
+    private void init() {
+        getUserScoreData();
     }
 
     /**
@@ -92,6 +110,16 @@ public class SignedInActivity extends AppCompatActivity {
                 intent = new Intent(SignedInActivity.this, ChatActivity.class);
                 startActivity(intent);
                 return true;
+
+            case R.id.optionOnCampus:
+                intent = new Intent(SignedInActivity.this, OnCampActivity.class);
+                startActivity(intent);
+                return true;
+
+            case R.id.optionOffCampus:
+                intent = new Intent(SignedInActivity.this, MainActivity.class);
+                startActivity(intent);
+                return true;
             default:
                 return super.onOptionsItemSelected(item);
         }
@@ -137,6 +165,39 @@ public class SignedInActivity extends AppCompatActivity {
         FirebaseAuth.getInstance().addAuthStateListener(mAuthListener);
     }
 
+    private void getUserScoreData() {
+        Log.d(TAG, "getUserScoreData: getting the user's Score information");
+        DatabaseReference reference = FirebaseDatabase.getInstance().getReference();
+
+        Query query1 = reference.child(getString(R.string.dbnode_users))
+                .orderByKey()
+                .equalTo(FirebaseAuth.getInstance().getCurrentUser().getUid());
+
+
+
+        query1.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+
+                //this loop will return a single result
+                for(DataSnapshot singleSnapshot: dataSnapshot.getChildren()){
+                    Log.d(TAG, "onDataChange: (QUERY METHOD 1) found user: "
+                            + singleSnapshot.getValue(User.class).toString());
+                    User user = singleSnapshot.getValue(User.class);
+                    mScore.setText("Your Score : "+user.getScore());
+
+
+
+                }
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
+    }
+
     @Override
     public void onStop() {
         super.onStop();
@@ -145,6 +206,12 @@ public class SignedInActivity extends AppCompatActivity {
         }
     }
 
-
+//    public void oncampusbuttonclick(View view) {
+//        Intent intent;
+//        Toast.makeText(this, "on campus", Toast.LENGTH_LONG).show();
+//        intent = new Intent(SignedInActivity.this, MainActivity.class);
+//        startActivity(intent);
+//       // return true;
+//    }
 
 }

@@ -8,13 +8,25 @@ public class User {
     private String profile_image;
     private String user_id;
     private String security_level;
+    private String score;
 
-    public User(String name, String phone, String profile_image, String user_id, String security_level) {
+
+
+    public String getScore() {
+        return score;
+    }
+
+    public void setScore(String score) {
+        this.score = score;
+    }
+
+    public User(String name, String phone, String profile_image, String user_id, String security_level, String score) {
         this.name = name;
         this.phone = phone;
         this.profile_image = profile_image;
         this.user_id = user_id;
         this.security_level = security_level;
+        this.score = score;
     }
 
     public User() {
@@ -69,6 +81,9 @@ public class User {
                 ", profile_image='" + profile_image + '\'' +
                 ", user_id='" + user_id + '\'' +
                 ", security_level=" + security_level +
+                "score='" + score + '\'' +
                 '}';
     }
+
+
 }
