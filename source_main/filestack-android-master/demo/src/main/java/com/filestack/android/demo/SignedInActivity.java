@@ -32,6 +32,8 @@ public class SignedInActivity extends AppCompatActivity {
     //Firebase
     private FirebaseAuth.AuthStateListener mAuthListener;
     private TextView mScore;
+    private TextView mLevelname;
+    private TextView mLevel;
     // widgets and UI References
 
 
@@ -42,6 +44,8 @@ public class SignedInActivity extends AppCompatActivity {
         setContentView(R.layout.activity_signedin);
         Log.d(TAG, "onCreate: started.");
         mScore = (TextView) findViewById(R.id.score);
+        mLevelname = (TextView) findViewById(R.id.level_circle_text2);
+        mLevel = (TextView) findViewById(R.id.progress_circle_text1);
 
         setupFirebaseAuth();
 
@@ -116,6 +120,11 @@ public class SignedInActivity extends AppCompatActivity {
                 startActivity(intent);
                 return true;
 
+            case R.id.optionYourLocation:
+                intent = new Intent(SignedInActivity.this, MapActivity.class);
+                startActivity(intent);
+                return true;
+
             case R.id.optionOffCampus:
                 intent = new Intent(SignedInActivity.this, MainActivity.class);
                 startActivity(intent);
@@ -185,8 +194,12 @@ public class SignedInActivity extends AppCompatActivity {
                             + singleSnapshot.getValue(User.class).toString());
                     User user = singleSnapshot.getValue(User.class);
                     mScore.setText("Your Score : "+user.getScore());
-
-
+                     int Remaingpoints;
+                    Remaingpoints = 500 - Integer.parseInt(user.getScore()) ;
+                    if (Integer.parseInt(user.getScore())  <= 500 )    {
+                        mLevelname.setText("Reach "+Remaingpoints+ " points to go to level 2");
+                        mLevel.setText("1 of 10");
+                    }
 
                 }
             }
@@ -206,12 +219,21 @@ public class SignedInActivity extends AppCompatActivity {
         }
     }
 
-//    public void oncampusbuttonclick(View view) {
-//        Intent intent;
-//        Toast.makeText(this, "on campus", Toast.LENGTH_LONG).show();
-//        intent = new Intent(SignedInActivity.this, MainActivity.class);
-//        startActivity(intent);
-//       // return true;
-//    }
+    public void offcampusbuttonclick(View view) {
+        Intent intent;
+        Toast.makeText(this, "off campus", Toast.LENGTH_LONG).show();
+        intent = new Intent(SignedInActivity.this, MainActivity.class);
+        startActivity(intent);
+       // return true;
+    }
+
+    public void oncampusbuttonclick(View view) {
+        Intent intent;
+        Toast.makeText(this, "on campus", Toast.LENGTH_LONG).show();
+        intent = new Intent(SignedInActivity.this, OnCampusActivity.class);
+        startActivity(intent);
+        // return true;
+    }
+
 
 }

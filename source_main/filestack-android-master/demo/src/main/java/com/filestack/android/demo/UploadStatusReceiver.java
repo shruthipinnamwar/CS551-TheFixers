@@ -32,6 +32,8 @@ public class UploadStatusReceiver extends BroadcastReceiver {
         String msg = String.format(locale, "upload %s: %s (%s) ((%s))", status, name, handle ,finalurl);
         Log.i(TAG, msg);
 
+
+
                 /*
                 ------ Change URL -----
                  */

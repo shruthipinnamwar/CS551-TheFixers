@@ -58,7 +58,7 @@
     <string name="dbnode_users">users</string>
 <string name="dbnode_chatrooms">chatrooms</string>
 
-
+    <string name="access_token"> pk.eyJ1Ijoic2hydXRoaTQ0IiwiYSI6ImNqZWhnejBrNjBrZTYzM3Fzd3NicXRqbDkifQ.IC4Vhl_5z71vgySOHz28Yw</string>
 <!-- Firebase Database Fields -->
 <string name="field_chatroom_name">chatroom_name</string>
 <string name="field_creator_id">creator_id</string>

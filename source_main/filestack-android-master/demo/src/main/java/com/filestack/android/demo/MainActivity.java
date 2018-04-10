@@ -160,7 +160,7 @@ public class MainActivity extends AppCompatActivity {
                     Log.d(TAG, "onDataChange: (QUERY METHOD 1) found action: "
                             + singleSnapshot.getValue(Action.class).toString());
                     Action action = singleSnapshot.getValue(Action.class);
-                    maction_name.setText("Your Action : "+ action.getAction_name());
+                    maction_name.setText("Next Action : "+ action.getAction_name());
                 }
             }
 
@@ -171,3 +171,12 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 }
+
+
+
+
+
+
+/**
+ * Use the Location Layer plugin to easily add a device location "puck" to a Mapbox map.
+ */
