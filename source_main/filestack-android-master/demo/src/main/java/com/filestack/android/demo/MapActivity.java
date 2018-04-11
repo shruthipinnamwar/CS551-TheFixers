@@ -50,7 +50,8 @@ import java.util.List;
 
 
 public class MapActivity extends AppCompatActivity implements LocationEngineListener, PermissionsListener {
-
+    public double lati;
+    public double longi;
     private PermissionsManager permissionsManager;
     private LocationLayerPlugin locationPlugin;
     private LocationEngine locationEngine;
@@ -97,7 +98,11 @@ private BuildingPlugin buildingPlugin;
     private void addMarkers() {
         List<Feature> features = new ArrayList<>();
     /* Source: A data source specifies the geographic coordinate where the image marker gets placed. */
-        features.add(Feature.fromGeometry(Point.fromCoordinates(new double[] {19.0809,79.5603})));
+//        features.add(Feature.fromGeometry(Point.fromCoordinates(new double[] {19.0809,79.5603})));
+
+   features.add(Feature.fromGeometry(Point.fromCoordinates(new double[] {lati,longi})));
+
+
         FeatureCollection featureCollection = FeatureCollection.fromFeatures(features);
         GeoJsonSource source = new GeoJsonSource(MARKER_SOURCE, featureCollection);
         mapboxMap.addSource(source);
@@ -141,6 +146,9 @@ private BuildingPlugin buildingPlugin;
     private void setCameraPosition(Location location) {
         mapboxMap.animateCamera(CameraUpdateFactory.newLatLngZoom(
                 new LatLng(location.getLatitude(), location.getLongitude()), 17));
+lati = location.getLatitude();
+longi = location.getLongitude();
+
     }
 
     @Override

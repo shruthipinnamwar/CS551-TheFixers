@@ -197,7 +197,7 @@ public class SignedInActivity extends AppCompatActivity {
                      int Remaingpoints;
                     Remaingpoints = 500 - Integer.parseInt(user.getScore()) ;
                     if (Integer.parseInt(user.getScore())  <= 500 )    {
-                        mLevelname.setText("Reach "+Remaingpoints+ " points to go to level 2");
+                        mLevelname.setText("Reach "+Remaingpoints+ "more points to go to level 2");
                         mLevel.setText("1 of 10");
                     }
 
@@ -230,7 +230,7 @@ public class SignedInActivity extends AppCompatActivity {
     public void oncampusbuttonclick(View view) {
         Intent intent;
         Toast.makeText(this, "on campus", Toast.LENGTH_LONG).show();
-        intent = new Intent(SignedInActivity.this, OnCampusActivity.class);
+        intent = new Intent(SignedInActivity.this, MapActivity.class);
         startActivity(intent);
         // return true;
     }
