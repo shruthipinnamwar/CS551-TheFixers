@@ -46,6 +46,7 @@
             android:textSize="15sp"
             android:textColor="@color/Black"
             android:id="@+id/textSecurityLevel"
+            android:visibility="invisible"
             android:gravity="center_vertical"/>
 
         <SeekBar
@@ -54,6 +55,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/textSecurityLevel"
             android:layout_marginTop="10dp"
+            android:visibility="invisible"
             android:max="10"/>
 
         <TextView
@@ -64,6 +66,7 @@
             android:textSize="15sp"
             android:layout_marginTop="10dp"
             android:textColor="@color/Black"
+            android:visibility="invisible"
             android:id="@+id/security_level"/>
 
     </RelativeLayout>

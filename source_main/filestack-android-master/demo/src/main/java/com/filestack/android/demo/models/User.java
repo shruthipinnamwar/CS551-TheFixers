@@ -1,6 +1,8 @@
 package com.filestack.android.demo.models;
 
 
+import java.util.List;
+
 public class User {
 
     private String name;
@@ -9,6 +11,7 @@ public class User {
     private String user_id;
     private String security_level;
     private String score;
+    private List<UserActions> user_actions;
 
 
 
@@ -27,10 +30,18 @@ public class User {
         this.user_id = user_id;
         this.security_level = security_level;
         this.score = score;
+        this.user_actions = user_actions;
     }
 
     public User() {
 
+    }
+
+    public List<UserActions> getuser_actions() {
+        return user_actions;
+    }
+    public void setuser_actions(List<UserActions> user_actions) {
+        this.user_actions = user_actions;
     }
 
     public String getSecurity_level() {
@@ -82,6 +93,7 @@ public class User {
                 ", user_id='" + user_id + '\'' +
                 ", security_level=" + security_level +
                 "score='" + score + '\'' +
+                ", user_actions=" + user_actions +
                 '}';
     }
 

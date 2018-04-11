@@ -26,6 +26,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
+
 import com.nostra13.universalimageloader.core.ImageLoader;
 
 import java.io.BufferedReader;
@@ -42,6 +43,8 @@ public class MainActivity extends AppCompatActivity {
     private static final String TAG = "MainActivity";
     private FirebaseAuth.AuthStateListener mAuthListener;
     private TextView maction_name;
+    public String action_name;
+    public String action_id;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -161,6 +164,8 @@ public class MainActivity extends AppCompatActivity {
                             + singleSnapshot.getValue(Action.class).toString());
                     Action action = singleSnapshot.getValue(Action.class);
                     maction_name.setText("Next Action : "+ action.getAction_name());
+                    action_name = action.getAction_name();
+                    action_id = action.getAction_id();
                 }
             }
 

@@ -72,7 +72,9 @@ public class NewChatroomDialog extends DialogFragment {
 
                         //create the chatroom
                         Chatroom chatroom = new Chatroom();
-                        chatroom.setSecurity_level(String.valueOf(mSeekBar.getProgress()));
+//                        chatroom.setSecurity_level(String.valueOf(mSeekBar.getProgress()));
+                        chatroom.setSecurity_level(String.valueOf("0"));
+
                         chatroom.setChatroom_name(mChatroomName.getText().toString());
                         chatroom.setCreator_id(FirebaseAuth.getInstance().getCurrentUser().getUid());
                         chatroom.setChatroom_id(chatroomId);

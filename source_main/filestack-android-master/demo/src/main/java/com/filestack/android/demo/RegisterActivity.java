@@ -108,7 +108,7 @@ public class RegisterActivity extends AppCompatActivity {
                             user.setName(email.substring(0, email.indexOf("@")));
                             user.setPhone("1");
                             user.setProfile_image("");
-                            user.setSecurity_level("1");
+                            user.setSecurity_level("0");
                             user.setScore("100");
                             user.setUser_id(FirebaseAuth.getInstance().getCurrentUser().getUid());
                             FirebaseDatabase.getInstance().getReference()
