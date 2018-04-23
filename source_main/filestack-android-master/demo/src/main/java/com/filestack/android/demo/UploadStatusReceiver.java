@@ -46,6 +46,7 @@ public class UploadStatusReceiver extends BroadcastReceiver {
         Selection selection = intent.getParcelableExtra(FsConstants.EXTRA_SELECTION);
         FileLink fileLink = (FileLink) intent.getSerializableExtra(FsConstants.EXTRA_FILE_LINK);
 
+
         String name = selection.getName();
         String handle = fileLink != null ? fileLink.getHandle() : "n/a";
         String finalurl = "https://cdn.filestackcontent.com/" + handle;

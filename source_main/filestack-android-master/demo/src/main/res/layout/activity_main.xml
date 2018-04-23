@@ -35,10 +35,12 @@
             android:id="@+id/maction_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
             android:layout_alignParentTop="true"
-            android:layout_alignStart="@+id/filestack_button"
-            android:layout_marginTop="115dp"
-            android:text="action name " />
+            android:layout_marginTop="48dp"
+            android:text="action namegffffffffffffffffffffffffffffffffffffffffffffff "
+            android:textSize="30dp"
+            android:textColor="@color/blue"/>
 
 
 

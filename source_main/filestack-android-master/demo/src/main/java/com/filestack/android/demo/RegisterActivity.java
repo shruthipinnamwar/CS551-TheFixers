@@ -32,6 +32,7 @@ public class RegisterActivity extends AppCompatActivity {
     private static final String DOMAIN_NAME = "gmail.com";
 
     //widgets
+
     private EditText mEmail, mPassword, mConfirmPassword;
     private Button mRegister;
     private ProgressBar mProgressBar;
