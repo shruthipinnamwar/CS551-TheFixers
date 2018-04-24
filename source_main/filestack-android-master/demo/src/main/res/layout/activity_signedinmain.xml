@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+                android:background="@android:color/white">
+
+
+    <TextView
+        android:id="@+id/header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="Activities"
+        android:textColor="@color/Black"
+        android:textSize="25sp" />
+
+    <RelativeLayout
+        android:id="@+id/relLayout0"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/header"
+        android:layout_marginLeft="44dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="28dp"
+        android:padding="20dp">
+
+        <!-- This weeks initiatives -->
+        <RelativeLayout
+            android:id="@+id/relLayout1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </RelativeLayout>
+
+
+        <!-- Scheduling -->
+        <RelativeLayout
+            android:id="@+id/relLayout2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/relLayout1"
+            android:layout_marginTop="20dp">
+
+        </RelativeLayout>
+
+        <!-- Culture -->
+        <RelativeLayout
+            android:id="@+id/relLayout3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/relLayout2"
+            android:layout_marginTop="20dp">
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/offcampus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/relLayout3"
+            android:layout_marginLeft="66dp"
+            android:layout_marginStart="66dp"
+            android:layout_toEndOf="@+id/relLayout3"
+            android:layout_toRightOf="@+id/relLayout3"
+            android:text="Off Campus" />
+
+    </RelativeLayout>
+
+
+
+    <ImageView
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:src="@drawable/profit_chart"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/relLayout0"
+        android:contentDescription="@string/tabian_consulting_sales_chart"/>
+
+    <Button
+        android:id="@+id/oncampus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/header"
+        android:layout_alignStart="@+id/header"
+        android:layout_alignTop="@+id/relLayout0"
+        android:text="On Campus" />
+
+
+</RelativeLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

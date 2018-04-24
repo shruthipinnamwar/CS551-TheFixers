@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "1058782342786",
+    "firebase_url": "https://propel-43199.firebaseio.com",
+    "project_id": "propel-43199",
+    "storage_bucket": "propel-43199.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1058782342786:android:ee454ea492ba9ed4",
+        "android_client_info": {
+          "package_name": "com.filestack.android.demo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1058782342786-je25qbvojgi73dsu02knje0tpqh8toht.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.filestack.android.demo",
+            "certificate_hash": "2137ffe4e835de2448645b34648fb07133f9bc3a"
+          }
+        },
+        {
+          "client_id": "1058782342786-h9osd984k58k2vf306k9li4sdb78ia2p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDsq67xX-9REZVGohLYqU8JK7plsXbmz1w"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1058782342786-h9osd984k58k2vf306k9li4sdb78ia2p.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
