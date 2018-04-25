@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">Think</string>
+    <string name="toast_message">"1.   Enter your name for the quiz.
+
+ 2.   Enter your valid mail address.
+        eg:   abc@xyz.com
+
+ 3.   Now set your password for
+        security purpose.
+
+              Enjoy the app! ☺</string>
+    <string name="title_activity_main2">Main2Activity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="title_activity_navigation_activity">QuizBook</string>
+    <string name="title_activity_navigation_">Navigation_Activity</string>
+    <string name="title_activity_about_us">About me</string>
+    <string name="note">Offline quiz activity is an option provided to propel students where they can find all the question related to different categories</string>
+    <string name="title_activity_settings">Settings</string>
+    <string name="title_activity_questions">Questions</string>
+    <string name="title_activity_main3">Main3Activity</string>
+    <string name="title_activity_score_card">ScoreCard</string>
+    <string name="title_activity_setting_activity">Settings</string>
+    <string name="email_content">Hey there! Take a look at the app developed by Team1.\n\nHere is the link to the app:\n\n </string>
+    <string name="link"><u>https://github.com/khemasree/QuizBook-Apk-File</u></string>
+    <string name="last_content">\n\nSteps: click on quizbook.apk and then click on download.</string>
+    <string name="facebook_app_id">1229380550527604</string>
+    <string name="google_app_id">AIzaSyBq8weErYqtAaZ9OL218a3CvwcnRoqPiUE</string>
+
+</resources>
